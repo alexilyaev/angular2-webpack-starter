@@ -11,10 +11,16 @@ import {ELEMENT_PROBE_BINDINGS} from 'angular2/debug';
 import {HTTP_BINDINGS} from 'angular2/http';
 
 /*
+ * App Services
+ * our collection of injectables services
+ */
+import {APP_SERVICES_BINDINGS} from './services/services';
+
+/*
  * App Component
  * our top level component that holds all of our components
  */
-import {App} from './app';
+import {App} from './components/app';
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
@@ -25,5 +31,6 @@ bootstrap(App, [
   FORM_BINDINGS,
   ROUTER_BINDINGS,
   HTTP_BINDINGS,
-  ELEMENT_PROBE_BINDINGS
+  ELEMENT_PROBE_BINDINGS,
+  APP_SERVICES_BINDINGS
 ]);
