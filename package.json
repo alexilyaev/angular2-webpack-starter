@@ -10,7 +10,7 @@
     "clean-install": "npm run clean && npm install",
     "clean-start": "npm run clean && npm start",
     "watch": "webpack --watch",
-    "server": "webpack-dev-server --inline --colors --display-error-details --display-cached --port 3000",
+    "server": "webpack-dev-server --hot --progress --inline --colors --display-error-details --display-cached --port 3000",
     "express": "node ./examples/server/express-server-example.js",
     "express-install": "npm install express connect-history-api-fallback morgan body-parser cors",
     "webdriver-update": "webdriver-manager update",

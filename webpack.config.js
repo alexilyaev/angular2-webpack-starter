@@ -26,7 +26,7 @@ var BannerPlugin   = webpack.BannerPlugin;
 
 module.exports = {
   devtool: env({
-    'development': 'eval',
+    'development': 'source-map',
     'all': 'source-map'
   }),
 
@@ -120,10 +120,11 @@ module.exports = {
       { test: /\.json$/,  loader: 'json' },
 
       // Support for CSS as raw text
-      { test: /\.css$/,   loader: 'raw' },
+      { test: /\.css$/,   loaders: ['raw'] },
 
       // support for .html as raw text
-      { test: /\.html$/,  loader: 'raw' },
+      // { test: /\.html$/,  loaders: ['imports?default=>', 'raw'] },
+      { test: /\.html$/,  loaders: ['raw'] },
 
       // Support for .ts files.
       {
